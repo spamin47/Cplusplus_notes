@@ -60,7 +60,6 @@ int main(){
     Node* temp_node = head;
     Node* tail = nullptr;
     while(temp_node!=nullptr){
-        cout<<"test"<<endl;
         if(temp_node->get_next_node()==nullptr){
             //add a new node
             temp_node->next_node = new Node;
@@ -68,7 +67,6 @@ int main(){
             temp_node->next_node->next_node = nullptr;
         }
         temp_node = temp_node->next_node->get_next_node();
-        cout<<temp_node<<endl;
     }
 
     temp_node = head;
@@ -77,5 +75,7 @@ int main(){
         temp_node = temp_node->get_next_node();
     }
 
+    temp_node = head;
+    cout<<temp_node->get_student()->get_student_id()<<endl;
     return 0;
 }
